@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       routerConfig: appRouter,
       title: 'Widgets Flutter Store',
       debugShowCheckedModeBanner: false,
-      theme: AppTheme(selectedColor: 5).getTheme(),
+      theme: AppTheme(selectedColor: 7).getTheme(),
     );
   }
 }
