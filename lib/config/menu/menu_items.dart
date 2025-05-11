@@ -31,6 +31,12 @@ const appMenuItems = <MenuItems>[
     title: 'Progress',
     subTitle: 'Linear, circulars, infinite and more...',
     link: '/progress',
-    icon: Icons.power_settings_new_rounded,
+    icon: Icons.refresh,
+  ),
+  MenuItems(
+    title: 'Snackbars',
+    subTitle: 'Tooltips and dialogs views',
+    link: '/snackbars',
+    icon: Icons.info_outline,
   ),
 ];
