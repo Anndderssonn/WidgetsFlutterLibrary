@@ -29,7 +29,7 @@ const appMenuItems = <MenuItems>[
   ),
   MenuItems(
     title: 'Progress',
-    subTitle: 'Linear, circulars, infinite and more...',
+    subTitle: 'Linear, circulars and infinite',
     link: '/progress',
     icon: Icons.refresh,
   ),
@@ -38,5 +38,11 @@ const appMenuItems = <MenuItems>[
     subTitle: 'Tooltips and dialogs views',
     link: '/snackbars',
     icon: Icons.info_outline,
+  ),
+  MenuItems(
+    title: 'Animated Container',
+    subTitle: 'Create figures from a button',
+    link: '/animated',
+    icon: Icons.animation_outlined,
   ),
 ];

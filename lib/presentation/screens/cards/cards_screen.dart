@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:widgets_store/config/theme/app_theme.dart';
 
 const cards = <Map<String, dynamic>>[
   {'elevation': 0.0, 'label': 'Elevation 0'},
