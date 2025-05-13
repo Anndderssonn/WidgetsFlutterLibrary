@@ -51,4 +51,10 @@ const appMenuItems = <MenuItems>[
     link: '/ui-controls',
     icon: Icons.control_point_outlined,
   ),
+  MenuItems(
+    title: 'Tutorial',
+    subTitle: 'Small tutorial app',
+    link: '/tutorial',
+    icon: Icons.question_answer_outlined,
+  ),
 ];
