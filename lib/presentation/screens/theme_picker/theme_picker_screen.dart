@@ -9,7 +9,7 @@ class ThemePickerScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final bool isDarkMode = ref.watch(isDarkModeProvider);
+    final bool isDarkMode = ref.watch(themeNotifierProvider).isDarkMode;
 
     return Scaffold(
       appBar: AppBar(
@@ -17,7 +17,7 @@ class ThemePickerScreen extends ConsumerWidget {
         actions: [
           IconButton(
             onPressed: () {
-              ref.read(isDarkModeProvider.notifier).update((state) => !state);
+              ref.read(themeNotifierProvider.notifier).toggleDartMode();
             },
             icon: Icon(
               isDarkMode ? Icons.dark_mode_outlined : Icons.light_mode_outlined,
@@ -36,7 +36,7 @@ class _ThemePickerView extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final List<Color> colors = ref.watch(colorsProvider);
-    final int colorPicked = ref.watch(colorPickedProvider);
+    final int colorPicked = ref.watch(themeNotifierProvider).selectedColor;
 
     return ListView.builder(
       itemCount: colors.length,
@@ -49,7 +49,7 @@ class _ThemePickerView extends ConsumerWidget {
           value: index,
           groupValue: colorPicked,
           onChanged: (value) {
-            ref.read(colorPickedProvider.notifier).state = index;
+            ref.read(themeNotifierProvider.notifier).changeThemeColor(index);
           },
         );
       },

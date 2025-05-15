@@ -11,18 +11,13 @@ class MyApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final int colorPicked = ref.watch(colorPickedProvider);
-    final bool isDarkMode = ref.watch(isDarkModeProvider);
+    final AppTheme appTheme = ref.watch(themeNotifierProvider);
 
     return MaterialApp.router(
       routerConfig: appRouter,
       title: 'Widgets Flutter Store',
       debugShowCheckedModeBanner: false,
-      theme:
-          AppTheme(
-            selectedColor: colorPicked,
-            isDarkMode: isDarkMode,
-          ).getTheme(),
+      theme: appTheme.getTheme(),
     );
   }
 }
